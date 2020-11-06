@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz II</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <h1 id="title">Global Solution SAS</h1>
+    <div>
+        <input id="textView" placeholder="Descripción de la tarea" type="text">
+        <button id="nuevaTarea">Nueva Tarea</button>
+    </div>
+    <div id="task">
+        <div id="toDotask">
+            <h2 id="toDo">To Do</h2>
+            <div id="toDoList"></div>
+        </div>
+        <div id="toDoingTask">
+            <h2 id="Doing">Doing</h2>
+            <div id="doingList"></div>
+        </div>
+        <div id="toDoneTask">
+            <h2 id="Done">Done</h2>
+            <div id="doneList"></div>
+        </div>
+    </div>
+      
+</body>
+</html>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAXKwSJsx_YKy64LUZz5-a02oa3HDHcO8A",
+    authDomain: "quiz-ii-225f6.firebaseapp.com",
+    databaseURL: "https://quiz-ii-225f6.firebaseio.com",
+    projectId: "quiz-ii-225f6",
+    storageBucket: "quiz-ii-225f6.appspot.com",
+    messagingSenderId: "119052679047",
+    appId: "1:119052679047:web:37315944af845dbf60c522",
+    measurementId: "G-PZ6G53NCKN"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="components/TareaClase.js"></script>
+<script src="js/index.js"></script>
