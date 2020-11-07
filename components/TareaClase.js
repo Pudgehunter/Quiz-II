@@ -44,9 +44,10 @@ class TareaClase {
             };
             referencia.set(taskTarea);
 
-            textView.value='';
-            
-            return component;
+            //Para borrarlos en el firebase
+            const databasee = firebase.database();
+            databasee.ref('ToDo/'+this.taskList.id).set(null);
+
         });
 
 
@@ -97,7 +98,7 @@ class TareaClase {
                 descripcionTarea:  this.taskList.descripcionTarea,
             };
             referencia.set(taskTarea);
-
+            
             databasee.ref('Doing/'+this.taskList.id).set(null);
         });
 
@@ -112,7 +113,8 @@ class TareaClase {
             };
             referencia.set(taskTarea);
 
-            textView.value='';
+            const databasee = firebase.database();
+            databasee.ref('Doing/'+this.taskList.id).set(null);
         });
 
         
@@ -159,7 +161,8 @@ class TareaClase {
             };
             referencia.set(taskTarea);
 
-            textView.value='';
+            const databasee = firebase.database();
+            databasee.ref('Done/'+this.taskList.id).set(null);
         });
 
         return component;
